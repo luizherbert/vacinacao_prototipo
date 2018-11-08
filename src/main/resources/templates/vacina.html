@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Lista de vacinação</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="row">
+            <div class="col-xs-8 col-md-8">
+                <h3>
+                    <a href="/create" class="btn btn-primary"><span class="glyphicon glyphicon-plus-sign"></span> Vacina</a>
+                </h3>
+                <h2>Lista de Vacinação</h2>
+                <div class="table-responsive">
+                    <table class="table" id="vacina-table">
+                        <thead>
+                            <tr>
+                                <th>Paciente</th>
+                                <th>Estabelecimento</th>
+                                <th>Vacina</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr th:each="vacina : ${vacinas}">
+                                <td><a th:text="${vacina.nomePaciente}" th:href="@{'/show/' + ${vacina.id}}"></a></td>
+                                <td th:text="${vacina.estabelecimentoSaude}"></td>
+                                <td th:text="${vacina.nomeVacina}"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
