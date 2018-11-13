@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.prototipo.vacinacaoweb.models;
 
 import org.springframework.data.annotation.Id;
@@ -14,10 +9,9 @@ import java.util.Date;
  *
  * @author didin
  */
-@Document(collection = "vacinas")
+
 public class Vacina {
-    @Id
-    String id;
+
     String nomePaciente;
     boolean temVacinacaoAnterior;
     String estabelecimentoSaude;
@@ -34,9 +28,9 @@ public class Vacina {
     public Vacina() {
     }
 
-    public Vacina(String id, String nomePaciente, boolean temVacinacaoAnterior, String estabelecimentoSaude, String nomeProfissional, String estrategiaVacinacao, String nomeVacina, String tipoDose, String descricaoDose, String loteVacina, String fonecedor, Date dataValidade, Date dataAplicacao) {
-        this.id = id;
-        this.nomePaciente = nomePaciente;
+    public Vacina(boolean temVacinacaoAnterior, String estabelecimentoSaude, String nomeProfissional
+            , String estrategiaVacinacao, String nomeVacina, String tipoDose, String descricaoDose, String loteVacina
+            , String fonecedor, Date dataValidade, Date dataAplicacao) {
         this.temVacinacaoAnterior = temVacinacaoAnterior;
         this.estabelecimentoSaude = estabelecimentoSaude;
         this.nomeProfissional = nomeProfissional;
@@ -45,18 +39,11 @@ public class Vacina {
         this.tipoDose = tipoDose;
         this.descricaoDose = descricaoDose;
         this.loteVacina = loteVacina;
-        Fonecedor = fonecedor;
+        this.Fonecedor = fonecedor;
         this.dataValidade = dataValidade;
         this.dataAplicacao = dataAplicacao;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getNomePaciente() {
         return nomePaciente;

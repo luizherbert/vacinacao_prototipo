@@ -12,7 +12,7 @@
                 <h3>
                     <a href="/vacina" class="btn btn-primary"><span class="glyphicon glyphicon-list"></span> Vacina</a>
                 </h3>
-                <h2 th:text="${vacina.nomePaciente}"></h2>
+                <h2 th:text="${paciente.nomePaciente}"></h2>
                 <dl class="list">
                     <dt>Vacina:</dt>
                     <dd th:text="${vacina.nomeVacina}"></dd>
@@ -20,9 +20,9 @@
                     <dd th:text="${vacina.estrategiaVacinacao}"></dd>
                 </dl>
                 <form action="/delete">
-                    <input type="hidden" name="id" th:value="${vacina.id}" />
-                    <h2><input type="submit" class="btn btn-danger" value="Delete" onclick="return confirm('Você tem certeza?');" />
-                        <a th:href="@{'/edit/' + ${vacina.id}}" class="btn btn-warning">Edit</a></h2>
+                    <input type="hidden" name="id" th:value="${paciente.id}" />
+                    <h2><input type="submit" class="btn btn-danger" value="Deletar" onclick="return confirm('Você tem certeza?');" />
+                        <a th:href="@{'/edit/' + ${paciente.id}}" class="btn btn-warning">Editar</a></h2>
                 </form>
             </div>
         </div>
