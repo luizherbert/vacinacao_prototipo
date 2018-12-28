@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Mostra Vacinação</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="row">
+            <div class="col-xs-8 col-md-8">
+                <h3>
+                    <a href="/vacina" class="btn btn-primary"><span class="glyphicon glyphicon-list"></span> Vacina</a>
+                </h3>
+                <h2 th:text="${paciente.nomePaciente}"></h2>
+                <dl class="list">
+                    <dt>Vacina:</dt>
+                    <dd th:text="${vacina.nomeVacina}"></dd>
+                    <dt>Estrategia Vacinacao</dt>
+                    <dd th:text="${vacina.estrategiaVacinacao}"></dd>
+                </dl>
+                <form action="/delete">
+                    <input type="hidden" name="id" th:value="${paciente.id}" />
+                    <h2><input type="submit" class="btn btn-danger" value="Deletar" onclick="return confirm('Você tem certeza?');" />
+                        <a th:href="@{'/edit/' + ${paciente.id}}" class="btn btn-warning">Editar</a></h2>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

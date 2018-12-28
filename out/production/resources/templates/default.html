@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Vacinação Protótipo</title>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap-theme.min.css"/>
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+            <!-- CABECALHO -->
+            <div id="my-header">
+                <header class="row">
+                    <div class="navbar navbar-fixed-top" style="margin-bottom: 0px; border-bottom-width: 0px;">
+                        <div class="navbar-inner">
+                            <div class="container">
+                                <div class="row">
+
+                                    <!-- MENU - HAMBURGUER -->
+                                    <button id="my-icon" class="hamburger hamburger--collapse" type="button">
+                                                <span class="hamburger-box">
+                                                      <span class="hamburger-inner"></span>
+                                                </span>
+                                    </button>
+
+                                    <div class="nomeTitulo"> SIGA SAUDE </div>
+
+                                    <div class="secretaria_saude">
+                                        <a href="#" target="_blank">Admin</a>
+                                        <div class="versao">Ultimo Login: 06/12/2018</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+            </div>
+
+        <!-- CONTEUDO (SERA INJETADO AQUI -->
+        <div id="my-content" class="container">
+            <div class="starter-template" layout:fragment="content"></div>
+        </div>
+
+        <script src="/webjars/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

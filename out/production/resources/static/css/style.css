@@ -1,29 +1,9 @@
-    @import url('https://fonts.googleapis.com/css?family=Averia+Libre|Londrina+Outline|Monoton|Roboto|Jua');
+    @import url('https://fonts.googleapis.com/css?family=Averia+Libre|Londrina+Outline|Monoton|Roboto');
 
-    body {
-       background: #19CC8B;
-    }
-
-    .container-principal {
-        padding-top: 88px;
-        padding-left: 73px;
-    }
 
     .starter-template {
       padding: 40px 15px;
       text-align: center;
-    }
-
-    .modal-conteudo {
-        background: #2A2D33;
-        box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-        color: #FFF;
-        padding-left: 31px;
-        padding-top: 15px;
-        padding-bottom: 20px;
-        min-height: 226px;
-        display: grid;
-        max-width: 64%;
     }
 
     .modal-wrapper {
@@ -260,16 +240,9 @@
 
 
     #my-content {
-       grid-area: main;
     }
 
-    #my-header {
-       grid-area: header;
-    }
 
-    .container-pages {
-        display: grid;
-    }
 
     /*
      TELA DE LOGIN

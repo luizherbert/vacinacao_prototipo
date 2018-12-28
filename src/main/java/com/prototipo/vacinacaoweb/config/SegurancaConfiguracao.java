@@ -33,7 +33,7 @@ public class SegurancaConfiguracao extends WebSecurityConfigurerAdapter {
                     .failureUrl("/login-erro.html")
                     .and()
                 .logout()
-                    .logoutSuccessUrl("/index.html");
+                    .logoutSuccessUrl("/login.html");
     }
 
     @Bean

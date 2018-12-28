@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+    <head>
+        <title>Editar Vacinação</title>
+    </head>
+    <body>
+        <div layout:fragment="content" class="row">
+            <div class="col-xs-8 col-md-8">
+                <h3>
+                    <a href="/vacina" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list"></span> Vacinação</a>
+                </h3>
+                <h2>Editar Vacinação</h2>
+                <form action="/update">
+                    <div class="form-group">
+                        <label for="nomePaciente">Paciente:</label>
+                        <input id="nomePaciente" type="text" class="form-control" name="nomePaciente" th:value="${paciente.nomePaciente}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="estabelecimentoSaude">Estabelecimento Saúde</label>
+                        <input id="estabelecimentoSaude" type="text"  class="form-control" name="estabelecimentoSaude" th:value="${vacina.estabelecimentoSaude}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="estrategiaVacinacao">Estrategia Vacinação:</label>
+                        <input id="estrategiaVacinacao" type="text" class="form-control" name="estrategiaVacinacao" th:value="${vacina.estrategiaVacinacao}" />
+                    </div>
+                    <div class="form-group">
+                        <label for="nomeVacina">Vacina:</label>
+                        <input id="nomeVacina" type="text"  class="form-control" name="nomeVacina" th:value="${vacina.nomeVacina}" />
+                    </div>
+                    <input type="hidden" name="id" th:value="${paciente.id}" />
+                    <button type="submit" class="btn btn-success">Salvar</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
